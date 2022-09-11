@@ -1,15 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import FormMain from "./components/FormMain/FormMain";
-import {useLocation} from "./hooks/useLocation";
 
 const App = () => {
 
-    console.log(useLocation().data)
+    const [lang] = useState(window.navigator.language)
 
     return (
         <div className={`App`}>
-            <h1>Главная страница</h1>
-            <FormMain />
+            <FormMain lang={lang} />
         </div>
     );
 };

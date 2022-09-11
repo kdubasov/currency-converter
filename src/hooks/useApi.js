@@ -1,11 +1,10 @@
 import {useLayoutEffect, useState} from "react";
 import axios from "axios";
-import {GLOBAL_DEF_URL} from "../constants/api";
 
 export const useApi = (url) =>{
     const [data,setData] = useState([])
     const [error,setError] = useState('')
-    const defaultURL = GLOBAL_DEF_URL + url;
+    const defaultURL = url;
 
     useLayoutEffect(() =>{
         axios.get(defaultURL).then(res => {

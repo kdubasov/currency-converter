@@ -1,0 +1,50 @@
+.FormMain{
+    width: inherit;
+    height: inherit;
+    display: inherit;
+    justify-content: inherit;
+}
+
+.FormMain form{
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.inp-container{
+    width: calc(50% - .5em);
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: var(--box-sh);
+    border-radius: 2em;
+}
+.inp-container .form-label{
+    font-size: 1.3em;
+    font-weight: 600;
+    width: 100%;
+}
+.inp-container input{
+    margin-bottom: .3em;
+}
+
+.FormMain form .select-bank{
+    margin-top: 1em;
+}
+
+@media screen and (max-width: 700px){
+    .FormMain form{
+        width: 95%;
+    }
+
+    .inp-container{
+        width: calc(100% - .5em);
+        padding: 1.5em;
+    }
+    .inp-container:first-child{
+        margin-bottom: 1em;
+    }
+}
